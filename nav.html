@@ -1,0 +1,64 @@
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
+        <link rel=stylesheet href="styles.css">
+        
+    
+    </head>
+    <body>
+        <nav>
+            <div>
+            <ul class="topnav" id="guest-menu" style="display: none;">
+                <li><img src="assests/pic2.png"></li>
+                <li><a href="index.html">Home</a></li>
+                <li> <a href="about.html">About</a></li>
+                <li> <a href="search.html">Search</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+                <li class="right"> <a href="signup.html">Sign Up</a></li>
+                <li class="right"> <a href="signin.html">Sign In</a></li>                     
+            
+            </ul>   
+           </div>
+            <div>
+              <ul class="topnav"  id="user-menu" style="display: none;" >
+                <p>
+                  Hello user <span id="uname"></span>
+                </p>
+                <li><img src="assests/pic2.png"></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" > About</a></li>   
+                <li><a href="search.html" >Search</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+               <li> <a href="index.html" onclick="localStorage.removeItem('user')">Logout</a></li>
+            </ul>
+            </div>
+            <div>
+            <ul class="topnav" id="admin-menu" style="display: none;" >
+                <p>
+                  Hello Admin!
+                </p>
+                <li><a href="index.html" >Home</a> </li>
+                <li><a href="addBook.html" >Add Book</a></li> 
+                <li><a href="bookInventory.html">Book Inventory</a></li>
+                <li><a href="index.html"onclick="localStorage.removeItem('user')" >Logout</a></li>
+            </ul>      
+        </div>  
+        
+        
+        </nav>
+         <script>             
+             let user = localStorage.getItem('user');
+                if (user === 'admin') {
+                $("#admin-menu").show();
+                } else if (user) {
+                $("#uname").html(user);
+                $("#user-menu").show();
+                } else {
+                $("#guest-menu").show();
+                }
+             
+         </script>
+    </body>
+</html>

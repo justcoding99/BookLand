@@ -1,0 +1,66 @@
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Admin Login</title>
+        <link rel=stylesheet href="styles.css">
+        
+    
+    </head>
+    <body>
+        
+         <div id="nav-placeholder1">
+            <script src="//code.jquery.com/jquery.min.js"></script>
+            <script>
+            $.get("adminnav.html", function(data){
+                $("#nav-placeholder1").replaceWith(data);
+            });
+            </script>
+        </div>
+         
+        
+        
+        <div class="container1">
+            
+            
+            
+            <div class="row">
+                <div class="col-12">
+
+             <div class="forms">
+            <div class="form login">
+                <span class="title">Admin Login</span>
+
+                <form>
+                    <div class="input-field">
+                        <input type="text" placeholder="Email" required>
+
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Password" required>
+                    </div>
+                    
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Login">
+                    </div>
+                </form>
+
+             </div>
+             </div>
+                </div>
+                    
+                </div>
+            </div>
+        
+        
+    </body>
+</html>

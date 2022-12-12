@@ -1,0 +1,519 @@
+/*Defaults*/
+nav, header, footer {
+    display: block;
+}
+
+body{
+    line-height: 1;
+    margin: 0;
+}
+label{
+    font-size: 35px;
+    font-weight: 600;
+    
+}
+
+p{
+    font-size: 28px;
+    line-height: 1.2;
+}
+ 
+.container{
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    
+}
+
+article p{
+    font-size: 35px;
+    padding: 20px;
+    
+}
+
+.row{
+    width: 100%;
+/*    flex/ strech as display/screen changes*/
+    display: flex;
+    flex-wrap: wrap;/*wrap content*/
+    align-items: center;    
+}
+
+.row::after{
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+
+*{
+    box-sizing: border-box;
+}
+/*Nav bar*/
+
+nav{
+    width:100%;
+    margin: 0;
+}
+
+nav ul{
+    background-color: #eee;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+ul.topnav li {
+    list-style: none;
+/*    move left horizontal */
+    float: left
+}
+ul.topnav li.right {
+    float: right;
+}
+ul.topnav li a{
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase; 
+    color: #666;
+}
+ul.topnav li a:hover {
+    background-color: #4c9ba8;
+    color: white;
+}
+
+ul.topnav li.menu{
+    display: none;
+}
+
+/*Responsive*/
+@media screen and (max-width: 680px){
+    ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+    
+    ul.topnav li.menu {
+/*        display easily overridden*/
+        display: block;
+        float: right;
+    }
+/*    icon stay in place */
+    ul.topnav.responsive li.menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    ul.topnav.responsive {
+        position: relative;
+    }
+    ul.topnav.responsive li {
+        display: inline;
+        float: none;
+    }
+    
+    ul.topnave.responsive li a {
+        display: block;
+        text-align: left;
+        
+    }
+    html body h1.header{
+        font-size: 50px;
+    }
+    article p{
+        font-size: 25px;
+    }
+    
+    .col-6,.col-4, .col-7, .col-5{
+        width:100%;
+        margin: 0;
+    }
+    
+    div.class2{
+        width: 50%;
+        display: block;
+    }
+    
+    html body div.box {
+        padding: 5px ;
+        display: block;
+    }
+    div.lastimg{
+        margin: 10px;
+    }
+    
+    div.lastimg img{
+        width: 100%;
+         
+    }
+    
+    html body div.leftside-col, html body div.rightsidecol {
+    margin: 15px;
+    }
+    input[type= "text"]{
+        width: 360px;
+    }
+   
+ 
+    
+    
+}
+
+/*section 1 gradient custom style*/
+
+#section1 {
+    background: #4c9ba8;
+    background: -webkit-linear-gradient(#4c9ba8, #65a5ff);
+    background: -o-linear-gradient(#4c9ba8,#65a5ff);
+    background: -moz-linear-gradient(#4c9ba8,#65a5ff);
+    background: linear-gradient(#4c9ba8,#65a5ff);
+}
+h1.large{
+    color: white;
+    font-size: 56px;
+    margin: 0;
+    line-height: 70px;
+}
+h2{
+    color: white;
+    margin: 0;
+    line-height: 50px;
+}
+form h2{
+    color: white;
+}
+
+input[type="text"]{
+/*    attribute selector*/
+    font: 20px;
+    width: 400px;
+    min-width: 100px;
+    padding: 5px;
+    border-radius: 7px;
+    
+} 
+div.leftside-col{
+    margin-left: 30%;
+}
+div.rightsidecol {
+    margin-left: 15%;
+}
+
+h1.header{
+    font-size: 65px;
+    text-align: center;
+    
+    
+}
+div.box{
+    text-align: center;
+    margin: 24px;
+    padding: 36px 24px 40px 24px;
+    border-radius: 7px;
+    background: white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px 0 rgba(0,0,0,.1);
+}
+
+div.image{
+    width: 100%;
+}
+
+button{
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    background-color: #0069ff;
+    padding: 15px 60px;
+    display: block;
+    text-align: center;
+    margin: 5px;
+    border-radius: 7px;
+    
+}
+
+button.adminlogin{
+    display: block;
+    margin: auto;
+    
+}
+
+div.lastimg img{
+    display: block;
+    margin: auto;
+    box-shadow: -2px  -2px 20px 2px rgba(0,0,0,.15), 2px 2px 17px 2px rgba(0,0,0,1);
+    border-radius: 7px;
+}
+
+footer.footer{
+    background-color: #666;
+    padding-left: 10%;
+}
+
+a.adminlogin{
+    text-decoration: none;
+    color: white
+}
+
+
+
+/*sign in / up*/
+.container1{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: auto;
+    margin-top: 100px;
+    
+}
+
+.container1 .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+   
+    
+}
+
+
+.container1 .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+    
+}
+
+.container1.active .login{
+    margin-left: -50%;
+    opacity: 0;
+/*    transition: margin-left 0.18s ease, opacity 0.15s ease;*/
+    text-align: center;
+    
+}
+
+
+.container1 .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+    text-align: center;
+}
+.container1.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    text-align: center;
+}
+
+.container1.active .forms{
+    height: 600px;
+    
+}
+.container1 .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+}
+
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+/*    accent-color: #4070f4;*/
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+    
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #265df2;
+}
+
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+.Heading1{
+    margin-left: 15px;
+    text-align: center;
+}
+
+.search-section{
+    display: block;
+/*    flex-direction:column;*/
+    gap: .25rem;
+    margin-left: 20px;
+    text-align: left;
+    padding-left: 25px;
+
+    
+}
+
+.searchinput{
+    font-size: 1rem;
+    width: 585px;
+    margin-left: 15px;
+
+}
+
+.book-search{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+    margin-left: 20px;
+    
+}
+.card{
+    border: 1px solid black;
+    background-color: white;
+    padding: .5rem;
+    margin-left: 20px;
+}
+.card > .img{
+    margin-bottom: .25rem;
+}
+
+.card > .name{
+    font-size: .8rem;
+    color: #777;
+}
+
+.reservebtn{
+    font-size: 15px;
+    width: 200px;
+    float: right;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.sendbtn , .smallButton{
+    font-size: 15px;
+    width: 200px;
+    display: block;
+    text-align: center;
+}
+
+.messageform, .messageinput{
+    display: block;
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-top: 5px;
+   
+}
+label{
+    font-size: 25px;
+}
+
+.hide{
+    display: none;
+}
+.btn-group button, .updatebtn {
+    padding: 10px 24px;
+    border: 1px solid; 
+    color: white;  
+    cursor: pointer; 
+    float: left; 
+    width: 150px;
+    font-size: 16px;
+  }
+  
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+   border-right: none;  /* Prevent double borders */
+  }

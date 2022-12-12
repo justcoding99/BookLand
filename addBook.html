@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>BOOKLAND Homepage</title>
+        <link rel=stylesheet href="styles.css">
+        <script type="text/javascript" src="script.js"> </script> 
+        
+    
+    </head>
+    <body>
+        <div class="topnav" id="admin-menu" style="display: none;">
+            <script src="//code.jquery.com/jquery.min.js"></script>
+            <script>
+            $.get("nav.html", function(data){
+                $("#admin-menu").replaceWith(data);
+            });
+            </script>
+            <ul class="topnav" id="admin-menu" style="display: none;" >
+                <p>
+                  Hello Admin!
+                </p>
+                <li><a href="index.html" >Home</a> </li>
+                <li><a href="addBook.html" >Add Book</a></li> 
+                <li><a href="bookInventory.html">Book Inventory</a></li>
+                <li><a href="index.html"onclick="localStorage.removeItem('user')" >Logout</a></li>
+            </ul>   
+        </div>
+             
+        
+        <div class="container" id="section1">
+            <div class="row">
+                <div class="col-6">
+                <div class="leftside-col">
+                    <h1 class="large">Welcome To BOOKLAND</h1>
+                    <h2>Learn and unlock knowledge with us</h2>
+                </div>
+                  
+                </div>
+                
+                <div class="col-6">
+
+               
+                </div>
+             
+            </div>
+        </div> 
+        
+        <hr>
+        <div class="container">
+            <label><b>Book Name :  </b></label>
+            <input type="text" placeholder="Enter Book Name"  required>
+            <br>
+        
+            <label><b>Author Name :</b></label>
+            <input type="text" placeholder="Enter Author Name" required>
+            <br>
+        
+            <label><b>Page Count :</b></label>
+            <input type="number" placeholder="Enter Page Count" required>
+            <br>
+        
+            <button type="submit " class="smallButton" >Add Book</button>
+             
+        </div>
+       
+        
+        <footer class="footer">
+           
+              
+        </footer>
+  
+    </body>
+
+
+</html>

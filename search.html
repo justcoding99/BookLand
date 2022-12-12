@@ -1,0 +1,82 @@
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Search Page</title>
+        <link rel=stylesheet href="styles.css">
+        <script
+        src="https://code.jquery.com/jquery-2.1.0.min.js"
+        integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0="
+        crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+         <div id="nav-placeholder">
+            <script src="//code.jquery.com/jquery.min.js"></script>
+            <script>
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").replaceWith(data);
+            });
+            </script>
+        </div>
+        
+        <h1 class="Heading1">Search For A Book</h1>
+        
+        <div class="search-section">
+            <label for="search" class="searchtext">Search</label>
+            <input type="search" id="box" class="searchinput" >   
+        </div>
+        
+        <div class="book-search" data-book-cards-container>
+            <div class="card">
+            
+                <div class="name">A Gentleman In Moscow</div>
+                <div>
+                    <button class="reservebtn" onclick="location.href='index.html';">Reserve</button>
+                </div>
+            </div>
+             <br>
+            
+            <div class="card">
+                
+                <div class="name">November 9</div>
+                <div>
+                    <button class="reservebtn" onclick="location.href='index.html';" >Reserve</button>
+                </div>
+            </div>
+             <br>
+            
+            <div class="card">
+                
+                <div class="name">Maslow's Hierarcy Of Needs</div>
+                <div>
+                    <button class="reservebtn" onclick="location.href='index.html';">Reserve</button>
+                </div>
+            </div>
+            <br>
+            
+            <div class="card">                
+                <div class="name">Leadership And Management In Healthcare</div>
+                <div>
+                    <button class="reservebtn" onclick="location.href='index.html';" >Reserve</button>
+                </div>
+            </div>
+             <br>
+        
+        </div>
+<script>
+    $('#box').keyup(function(){
+   var valThis = $(this).val().toLowerCase();
+    if(valThis == ""){
+        $('.card > .name').show();
+    } else {
+        $('.card > .name').each(function(){
+            var text = $(this).text().toLowerCase();
+            (text.indexOf(valThis) >= 0) ? $(this).show() : $(this).hide();
+        });
+   };
+});
+</script>
+    </body>
+</html>

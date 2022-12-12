@@ -1,0 +1,57 @@
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Sign up</title>
+        <link rel=stylesheet href="styles.css">
+        
+    
+    </head>
+    <body>
+              
+        
+         <div class="container1">
+
+            <div class="forms">
+            <div class="form login">
+                <span class="title">Sign up</span>
+
+                <form action="index.html" id="mySubform" method="get">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" name="uSubname" id="uSubname" required>
+
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" name="uSubname" id="uSubname" required>
+
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password"  name="uSubname" id="uSubname" required>
+                    </div>
+
+
+
+                    <div class="input-field button">
+                        <button class="button smallButton" type="submit">Register</button>
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Already a user?
+                        <a href="signin.html" class="text signup-link">Sign in</a>
+                    </span>
+                </div>
+
+             </div>
+             </div>
+             </div>
+             <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+             <script>
+                 $( "#mySubform" ).submit(function( event ) {
+                     localStorage.setItem('user', $("#uSubname").val());
+                 });
+             </script>
+       
+    </body>
+</html>

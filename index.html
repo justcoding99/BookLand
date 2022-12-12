@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>BOOKLAND Homepage</title>
+        <link rel=stylesheet href="styles.css">
+        <script type="text/javascript" src="script.js"> </script> 
+        
+    
+    </head>
+    <body>
+        <div id="nav-placeholder">
+            <script src="//code.jquery.com/jquery.min.js"></script>
+            <script>
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").replaceWith(data);
+            });
+            </script>
+        </div>
+        
+        <div class="container" id="section1">
+            <div class="row">
+                <div class="col-6">
+                <div class="leftside-col">
+                    <h1 class="large">Welcome To BOOKLAND</h1>
+                    <h2>Learn and unlock knowledge with us</h2>
+                </div>
+                    
+                
+                </div>
+                
+                <div class="col-6">
+
+               
+                </div>
+             
+            </div>
+        </div>
+        
+        <header>
+            <h1 class="header">Explore our recent books</h1>
+        </header>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="box">
+                        <div class="image">
+                        <img src="assests/Book3.jpg">
+                        </div>                                              
+                    </div>
+                    
+                </div>
+                
+                  <div class="col-4">
+                    <div class="box">
+                        <div class="image">
+                        <img src="assests/Book4.jpg">
+                        </div>                    
+                    </div>
+                    
+                </div>
+                
+                  <div class="col-4">
+                    <div class="box">
+                        <div class="image">
+                        <img src="assests/Book5.jpg">
+                        </div>                      
+                    </div>
+                    
+                </div>
+            </div>
+            
+        
+        
+        </div>
+        
+        <hr>
+        
+        <div class="container">
+            <div class="row">
+            <div class="col-7">
+                <article>
+                    <p>BookLand is a online library for the intellectually curious. We help everyone discover, share, and connect valuable ideas. BookLand is a great resource for locating unique, trustworthy books that you often can’t find anywhere except in a library. And by connecting thousands of book collections in one place, BookLand makes it easy for you to browse the world’s libraries from one easy search box. Like a paper library, we provide free access to researchers, historians, scholars, people with print disabilities, and the general public. Our mission is to provide universal access to all knowledge.<p>
+                </article>
+            
+            </div>
+            
+            <div class="col-5"> 
+                <div class="lastimg">
+                    <img src="assests/Atomic-Habits.jpg">
+                    
+                </div>
+            
+            </div>
+             </div>
+        
+        </div>
+        
+        <footer class="footer">
+            <div class="row">
+                
+                <div class="col-12">
+                 
+                    <button class="adminlogin" id="adminButton"><a href="adminlogin.html" class="adminlogin" >Admin Login</a></button>
+                    
+                </div>
+            </div>
+              
+        </footer>
+        <script>             
+            let user = localStorage.getItem('user');
+               if (user ==='admin') {
+               $("#adminButton").hide();               
+               }else if (user) {
+                $("#uname").html(user);
+                $("#adminButton").hide();
+               }else {
+               $("#adminButton").show();
+               }
+            
+        </script>
+  
+    </body>
+
+
+</html>
